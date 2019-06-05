@@ -9,4 +9,5 @@ All programs will be written in Python3.
 Programs will contain comments for me as I learn more about Python3, meaning some of the programs will not be technically written for efficiency, but rather a way for me to deepen my understanding of Python.
 
 ALGORITHM BRANCHES:
-1. insertion_sort
+  1. insertion_sort
+  2. selection_sort
