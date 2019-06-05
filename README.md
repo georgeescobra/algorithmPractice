@@ -24,7 +24,8 @@ Time Complexities:
 
 Simple Walk-Through of Selection Sort(ascending):
 
-  Array = [9, 6, 4, 3, 1, 7]
+    Array = [9, 6, 4, 3, 1, 7]
+
     1st Iteration:
       index = 0
       Minimum = 9
