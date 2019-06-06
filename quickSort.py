@@ -7,6 +7,8 @@ def quickSort(array, low, high):
 		partitionIndex = partition(array, low, high)
 		quickSort(array, low, partitionIndex - 1)
 		quickSort(array, partitionIndex + 1, high)
+	#	don't necessarily have to return, but doing so for the sake of the unit_test
+	return array
 
 
 def partition(array, low, high):
@@ -23,15 +25,17 @@ def partition(array, low, high):
 
 
 def main():
-	print(__name__)
-
 	unordered = [random.randint(0, 100) for i in range(50)]
 
 	orig = copy.deepcopy(unordered)
 
 	quickSort(unordered, 0, len(unordered) - 1)
+	print('Sorting List of 50 Elements in Ascending Order')
 
-	#	this is a better way to check if the elements of the quicksorted unordered list is the same as the sorted(orig) list instead of having to zip through both arrays
+	print('{0:5} ==> {1:5}'.format('Original','Sorted'))
+
+	for orig, sorted in zip(orig, unordered):
+	    print('{0:5}    ==>  {1:5d}'.format(orig, sorted))
 
 
 #	this is the proper way of having a 'main' function in python3
