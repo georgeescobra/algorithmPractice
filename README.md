@@ -11,3 +11,4 @@ Programs will contain comments for me as I learn more about Python3, meaning som
 ALGORITHM BRANCHES:
   1. insertion_sort
   2. selection_sort
+  3. quick_sort
