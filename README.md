@@ -12,3 +12,4 @@ ALGORITHM BRANCHES:
   1. insertion_sort
   2. selection_sort
   3. quick_sort
+  4. merge_sort
