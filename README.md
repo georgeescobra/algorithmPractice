@@ -1,14 +1,16 @@
-ALGORITHM PRACTICE INTRO
+THINGS LEARNED ABOUT MERGESORT
 
-I will have different branches for different algorithms.
+Merge sort is a recursive algorithm that continuously splits a list in half
+It will start to sort once the splits have reached a size of one
+Once the two halves are sorted then they are merged
 
-Each branch will contain a README that contains notes on each of the algorithms.
+Note: The lists when sliced may not be evenly cut in half, but does not matter because 
+	  the lengths will differ by at most one
 
-All programs will be written in Python3.
+Runtime Analysis:
+	Merging runs Θ(n)
+	MergeSort runs Θ(n lg n)
+https://www.khanacademy.org/computing/computer-science/algorithms/merge-sort/a/analysis-of-merge-sort
 
-Programs will contain comments for me as I learn more about Python3, meaning some of the programs will not be technically written for efficiency, but rather a way for me to deepen my understanding of Python.
-
-ALGORITHM BRANCHES:
-  1. insertion_sort
-  2. selection_sort
-  3. quick_sort
+Walk-Through:
+	https://medium.com/@amirziai/merge-sort-walkthrough-with-code-in-python-e4f76d90a4ea
