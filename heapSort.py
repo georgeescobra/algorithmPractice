@@ -42,33 +42,40 @@ def insertElement(list, num):
         swap(list, current, parentPosition(current))
         current = parentPosition(current)
 
-def removeElement(list):
-	#print(list)
-	temp = list[0]
-	del list[0]
-	minHeapify(list, 0)
-	#print(list)
-	return temp
+def removeMin(list):
+    temp = list[0]
+    # list[-1] gets the last element of the list    
+    list[0] = list[-1]
+    # deletes the last element of the list
+    del list[-1]
+    # have to call minheap again because numbers were moved around
+    minHeapify(list, 0)
+    return temp
 
 def buildMinHeap(list):
 	# range(start, stop, step)
     for position in range(len(list) // 2, -1, -1):
         minHeapify(list, position)
 
-def printMinHeap(list):
-	#while list:
-		#print(removeElement(list
-	for i in range(50):
-		print(removeElement(list))
+def printMinHeap(list, newlist):
+    # i initalized temp here so that i dont have to keep initializing it in while loop
+    temp = None
+    while list:
+        temp = removeMin(list)
+        print(temp)
+        newlist.append(temp)
 
 def main():
-	array = [random.randint(0, 100) for i in range(50)]
-	# one way to do it without having to use deepcopy
-	copied = [num for num in array]
-	buildMinHeap(array)
-	#print(array)
-	printMinHeap(array)
-
+    array = [random.randint(0, 100) for i in range(50)]
+    # one way to do it without having to use deepcopy
+    copied = [num for num in array]
+    # this list is to store the value when popping the min in removeMin
+    some = []
+    buildMinHeap(array)
+    printMinHeap(array, some)
+    # only prints if the sorted original copied list is the same as the list that was being inserted to by printMinHeap
+    if some == sorted(copied):    
+        print('SUCCESS')
 
 
 if __name__ == "__main__":
