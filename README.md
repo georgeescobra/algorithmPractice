@@ -13,3 +13,4 @@ ALGORITHM BRANCHES:
   2. selection_sort
   3. quick_sort
   4. merge_sort
+  5. heap_sort
