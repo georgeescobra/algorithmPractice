@@ -15,3 +15,4 @@ ALGORITHM BRANCHES:
   4. merge_sort
   5. heap_sort
   6. binary_search_tree
+  7. breadth_first_search
