@@ -18,8 +18,10 @@
 # the connections in an undirected graph are called edges
 # the connections in a directed graph are called arcs
 
-
+# this returns a list
 def bfs(graph, start):
+    if start not in graph.keys():
+        return '{} is not a key'.format(start)
     explored = []
     queue = [start]
 
@@ -65,6 +67,6 @@ for k, v in graph.items():
 # starting node is "a"
 
 
-print(bfs(graph,"d"))
+print(bfs(graph,"f"))
 
 
