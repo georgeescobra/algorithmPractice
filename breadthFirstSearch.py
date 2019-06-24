@@ -18,27 +18,53 @@
 # the connections in an undirected graph are called edges
 # the connections in a directed graph are called arcs
 
+
+def bfs(graph, start):
+    explored = []
+    queue = [start]
+
+    while queue:
+        node = queue.pop(0)
+        if node not in explored:
+            # add node to list of checked nodes
+            explored.append(node)
+            neighbours = graph[node]
+ 
+            # add neighbours of node to queue
+            for neighbour in neighbours:
+                queue.append(neighbour)
+    return explored
+
+# adjacency list
 graph = {"a" : ["c"],
          "b" : ["c", "e"],
          "c" : ["a", "b", "d", "e"],
          "d" : ["c"],
-         "e" : ["c", "b"],
-         "f" : ["f"] # this means that this is an edge loop
+         "e" : ["c", "b"]
+         # "f" : ["f"] # this means that this is an edge loop
 }
 
 # this is how to append a new key to a dictionary
-graph.update({"g" : ["b"]})
+#   graph.update({"g" : ["b"]})
+
 # this is the only way i figured out how to update an existing list as a value in a dictionary
 # if i did it like below then it will return none, since update overrides the existing value
-temp = graph.get("a")
-temp.append("d")
+#   temp = graph.get("a")
+#   temp.append("d")
 
 # can't do this will return none
-some = [1, 2 ,3].append(4)
+#   some = [1, 2 ,3].append(4)
 
 
-graph.update({"a" : temp})
+#graph.update({"a" : temp})
 
 # this is a way to loop through the dictionary with its corresponding key and value
 for k, v in graph.items():
     print(k, ': ',v)
+
+# starting node is "a"
+
+
+print(bfs(graph,"d"))
+
+
