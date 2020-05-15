@@ -1,0 +1,16 @@
+- Array and String questions are often interchangeable
+- Arrays like in java are usually fixed in size
+    - For dynamic arrays Array Lists are used
+    - Typical implementations is when the array is full, the array doubles in size
+    - Each doubling takes O(n) time, but happens rarely so its amortized(when an algorithm has a bad time complexity some of the time) 
+    is still O(1)
+        - Python list is the same as ^^, but inserting in a middle of a list is inefficient as it has to move the elements n times
+Q: Why is the amortized insertion runtime O(1):
+    - Inserting N elements takes O(N) work total, but each insertion is O(1) on average, even though some insertions take O(N)
+- best way to concatenate a list of letters/words is to use ''.join(list)
+- 
+
+
+HASH TABLES <dictionary>:
+    - HASH TABLE COLLISION RESOLUTIONS
+        - Chaining with Linked Lists    
