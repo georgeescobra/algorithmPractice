@@ -2,7 +2,7 @@ def pprint(matrix):
     for i, row in enumerate(matrix):
         print(i ,row, end=",\n") 
 
-def main():
+def islandProblem():
     """
     the idea is to iterate through the matrix mark visited nodes and check its neighbours
     continue to iterate through the neighbours, once there are no more neighbours to iterate through
@@ -55,7 +55,8 @@ def main():
                 some = 0
                 trackIslandSize = 0
                 while q:
-                    currI, currJ = q.pop(0)
+                    currI, currJ = q.pop(0) # pop() usually defaults to the last element of a list
+                                            # but since this is a queue we want to get FIFO (first element)
                     testCase[currI][currJ] = -1
                     for indexOp in range(-1,2): # this is to help check for neighboring nodes. Also ranges in python are [inclusive, exclusive)
                         checkI = currI + indexOp
@@ -84,13 +85,11 @@ def main():
     print("Largest Island Size", largestIsland)
     return numOfIslands
 
-print('Number of Islands', main())
+print('Number of Islands', islandProblem())
 
          
+def tree():
+    """ this is to learn tree traversal """ 
+    
 
 
-
-def bfs():
-    """
-    helper function, this is going to get called multiple times/ per unvisited node
-    """
