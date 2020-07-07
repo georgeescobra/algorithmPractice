@@ -55,7 +55,7 @@ def main():
                 some = 0
                 trackIslandSize = 0
                 while q:
-                    currI, currJ = q.pop()
+                    currI, currJ = q.pop(0)
                     testCase[currI][currJ] = -1
                     for indexOp in range(-1,2): # this is to help check for neighboring nodes. Also ranges in python are [inclusive, exclusive)
                         checkI = currI + indexOp
