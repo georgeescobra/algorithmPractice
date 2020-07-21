@@ -1,4 +1,5 @@
 def pprint(matrix):
+    """ this just prints the matrix in a readable way """
     for i, row in enumerate(matrix):
         print(i ,row, end=",\n") 
 
@@ -71,9 +72,12 @@ def islandProblem():
                                     # it is already in the q. 
                                     # i feel like there is a way to do it without having to check if it is in q
                                     # i could probably just have a check to see whether or not the current value is -1, 1
-                                    # i feel like the preemptive check is a lot better because it is at most always going to be 4 extras, where was if you have a big q you would have to constantly iterate through the list to check whether or not it is in q
-                                    if testCase[checkI][checkJ] == 1 and (checkI, checkJ) not in q: 
+                                    # i think the better way to do this is just change the value of the node to be like 2 (which means it is in queue but no visisted), will need to change logic around for this tho
+                                    # if value is 2, then that means the node is in q
+                                    # this assumes that the original values of the array is just 0,1
+                                    if testCase[checkI][checkJ] == 1:
                                         q.append((checkI,checkJ))
+                                        testCase[checkI][checkJ] = 2
                     print(q)
                     pprint(testCase)
                     some += 1
@@ -84,12 +88,10 @@ def islandProblem():
 
     print("Largest Island Size", largestIsland)
     return numOfIslands
-
-print('Number of Islands', islandProblem())
-
          
 def tree():
     """ this is to learn tree traversal """ 
     
 
-
+if '__name__' == '__main__':
+    print('Number of Islands', islandProblem())
