@@ -1,4 +1,9 @@
-# this is going to contain random problems that i work on
+"""
+these are questions I had a tough time answering during interviews
+    Questions to work on:
+        - algorithm for amount of deletions between two strings
+        - 
+"""
 
 def consecutiveHighLows(test):
     """ 
@@ -6,6 +11,8 @@ def consecutiveHighLows(test):
         return the longest consecutive highs or consecutive lows:
         [1,2,3,4] -> 4
         [1,3,2,1,4,5] -> 3 (3,2,1) or (1,4,5)
+        Solved it pretty fast rn, but during the test I didnt fully understand the question well enough
+
     """
     upCount = 1
     downCount = 1
