@@ -35,3 +35,4 @@ def consecutiveHighLows(test):
 
 print(consecutiveHighLows([1,2,3,4]))
 print(consecutiveHighLows([1,3,2,1,4,5]))
+print(consecutiveHighLows([1,3,2,2,0,1,4,5]))
