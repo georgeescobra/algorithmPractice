@@ -2,7 +2,16 @@
 these are questions I had a tough time answering during interviews
     Questions to work on:
         - algorithm for amount of deletions between two strings
-        - 
+        - given a long int -> 10002304001, how many different ways can you write this
+            - if each num in int corresponds to letter in alphabet 0:a 1:b 2:c ... z:25 (CISCO)
+        - given an array of ints and an int x := segment size
+            - get the minimum in segment
+            - return maximum of the segments
+        - textformatting(start: List[int], end: List[int], style: List[char]) -> int:
+            - calculate the minimum number of operations to be done
+            - selection + 1 operation, styling + 1 operation
+            - take account for ranges that are similar
+                - not sure if i should take account only for consecutive ranges or ranges in the whole list
 """
 
 def consecutiveHighLows(test):
